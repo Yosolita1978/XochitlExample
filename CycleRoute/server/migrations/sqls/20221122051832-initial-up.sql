@@ -1,6 +1,6 @@
 /* Replace with your SQL commands */
 CREATE TABLE favorites (
-    id integer NOT NULL,
+    id SERIAL PRIMARY KEY,
     sub character varying(255) NOT NULL,
     start_location character varying(255) NOT NULL,
     end_location character varying(255) NOT NULL,
@@ -29,6 +29,7 @@ CREATE SEQUENCE users_id_seq
     NO MINVALUE
     NO MAXVALUE
     CACHE 1;
+
 
 SELECT pg_catalog.set_config('search_path', '', false);
 

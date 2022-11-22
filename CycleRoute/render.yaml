@@ -4,8 +4,8 @@ services:
     type: web
     env: node
     repo: https://github.com/Yosolita1978/XochitlExample
-    buildCommand: cd xochitl cd CycleRoute cd client && npm install && npm run build && cd ../server && npm install
-    startCommand: cd xochitl cd CycleRoute cd server && node ./node_modules/db-migrate/bin/db-migrate up && node server.js
+    buildCommand: cd CycleRoute && cd client && npm install && npm run build && cd ../server && npm install
+    startCommand: cd CycleRoute && cd server && node ./node_modules/db-migrate/bin/db-migrate up && node server.js
     envVars:
       - key: DB_URL
         fromDatabase:
